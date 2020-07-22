@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm component renders the SearchForm component 1`] = `
+<form
+  onSubmit={[MockFunction]}
+>
+  <input
+    name="api"
+    onChange={[MockFunction]}
+    type="text"
+    value="https://www.futuramaapi.herokuapp.com"
+  />
+  <label>
+    GET
+    <input
+      checked={false}
+      name="method"
+      onChange={[MockFunction]}
+      type="radio"
+      value="get"
+    />
+  </label>
+  <label>
+    POST
+    <input
+      checked={false}
+      name="method"
+      onChange={[MockFunction]}
+      type="radio"
+      value="post"
+    />
+  </label>
+  <label>
+    PUT
+    <input
+      checked={false}
+      name="method"
+      onChange={[MockFunction]}
+      type="radio"
+      value="put"
+    />
+  </label>
+  <label>
+    PATCH
+    <input
+      checked={true}
+      name="method"
+      onChange={[MockFunction]}
+      type="radio"
+      value="patch"
+    />
+  </label>
+  <label>
+    DELETE
+    <input
+      checked={false}
+      name="method"
+      onChange={[MockFunction]}
+      type="radio"
+      value="delete"
+    />
+  </label>
+  <input
+    name="jsonBody"
+    onChange={[MockFunction]}
+    type="textarea"
+    value="{ 'name': 'bender' }"
+  />
+  <button>
+    Submit
+  </button>
+</form>
+`;

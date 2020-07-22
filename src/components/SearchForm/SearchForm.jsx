@@ -7,26 +7,26 @@ const SearchForm = ({ api, jsonBody, method, onChange, onSubmit }) => (
 
     <label>
         GET
-      <input type="radio" name="method" value="get" />
+      <input type="radio" name="method" value="get" checked={method === 'get'} onChange={onChange}/>
     </label>
     <label>
         POST
-      <input type="radio" name="method" value="post" />
+      <input type="radio" name="method" value="post" checked={method === 'post'} onChange={onChange} />
     </label>
     <label>
         PUT
-      <input type="radio" name="method" value="put" />
+      <input type="radio" name="method" value="put" checked={method === 'put'} onChange={onChange}/>
     </label>
     <label>
         PATCH
-      <input type="radio" name="method" value="patch" checked={method === 'patch'} />
+      <input type="radio" name="method" value="patch" checked={method === 'patch'} onChange={onChange} />
     </label>
     <label>
         DELETE
-      <input type="radio" name="method" value="delete" />
+      <input type="radio" name="method" value="delete" checked={method === 'delete'} onChange={onChange}/>
     </label>
 
-    <textarea type="json-input" value={jsonBody} onChange={onChange} />
+    <input type="textarea" name="jsonBody" value={jsonBody} onChange={onChange} />
 
     <button>Submit</button>
   </form>

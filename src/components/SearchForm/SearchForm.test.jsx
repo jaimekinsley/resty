@@ -27,5 +27,32 @@ describe('SearchForm component', () => {
     expect(wrapper.find('input[name="method"]').findWhere(radios => radios.prop('checked')).prop('value')).toEqual('patch');
   });
 
+  it('has a textarea with a value set to jsonBody', () => {
+    expect(wrapper.find('input[name="jsonBody"]').prop('value')).toEqual('{ \'name\': \'bender\' }');
+  });
+
+  it('invokes an onChange prop when the api input changes', () => {
+    wrapper.find('input[name="api"]').simulate('change');
+    expect(handleChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('invokes an onChange prop when the method radio button changes', () => {
+    wrapper.find('input[value="get"]').simulate('change');
+    expect(handleChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('invokes an onChange prop when the jsonBody input changes', () => {
+    wrapper.find('input[name="jsonBody"]').simulate('change');
+    expect(handleChange).toHaveBeenCalledTimes(1);
+  });
+
+  it('invokes an onSubmit prop when submit button is clicked', () => {
+    wrapper.find('form').simulate('submit');
+    expect(handleSubmit).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders the SearchForm component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
 
