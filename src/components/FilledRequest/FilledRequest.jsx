@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Request = ({ method, api }) => (
+const FilledRequest = ({ method, api }) => (
   <>
     <p>{method}</p>
     <p>{api}</p>
   </>
 );
 
-Request.propTypes = {
+FilledRequest.propTypes = {
   method: PropTypes.string.isRequired,
   api: PropTypes.string.isRequired
 };
 
-export default Request;
+export default FilledRequest;
