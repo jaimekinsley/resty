@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Request component renders a Request 1`] = `
+<Fragment>
+  <p>
+    get
+  </p>
+  <p>
+    https://futuramaapi.com
+  </p>
+</Fragment>
+`;

@@ -7,11 +7,11 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
   <input
     name="api"
     onChange={[MockFunction]}
+    placeholder="API URL"
     type="text"
     value="https://www.futuramaapi.herokuapp.com"
   />
   <label>
-    GET
     <input
       checked={false}
       name="method"
@@ -19,9 +19,9 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       type="radio"
       value="get"
     />
+    GET
   </label>
   <label>
-    POST
     <input
       checked={false}
       name="method"
@@ -29,9 +29,9 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       type="radio"
       value="post"
     />
+    POST
   </label>
   <label>
-    PUT
     <input
       checked={false}
       name="method"
@@ -39,9 +39,9 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       type="radio"
       value="put"
     />
+    PUT
   </label>
   <label>
-    PATCH
     <input
       checked={true}
       name="method"
@@ -49,9 +49,9 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       type="radio"
       value="patch"
     />
+    PATCH
   </label>
   <label>
-    DELETE
     <input
       checked={false}
       name="method"
@@ -59,6 +59,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       type="radio"
       value="delete"
     />
+    DELETE
   </label>
   <input
     name="jsonBody"
