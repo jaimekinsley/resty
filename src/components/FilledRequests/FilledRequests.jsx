@@ -19,7 +19,7 @@ FilledRequests.propTypes = {
   filledRequests: PropTypes.arrayOf(PropTypes.shape({
     method: PropTypes.string.isRequired,
     api: PropTypes.string.isRequired
-  }))
+  })).isRequired
 };
 
 export default FilledRequests;

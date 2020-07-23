@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchForm = ({ api, jsonBody, method, onChange, onSubmit }) => (
+const SearchForm = ({ api, method, jsonBody, onChange, onSubmit }) => (
   <form onSubmit={onSubmit}>
     <input type="text" name="api" placeholder="API URL" value={api} onChange={onChange} />
 

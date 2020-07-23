@@ -11,10 +11,10 @@ describe('FilledRequests component', () => {
       { method: 'get', api: 'http://firstrequest.com' },
       { method: 'put', api: 'http://secondrequest.com' }
     ];
-    wrapper = shallow(<FilledRequests filledRequest={filledRequests} />);
+    wrapper = shallow(<FilledRequests filledRequests={filledRequests} />);
   });
 
-  it('displayed a list of two FilledRequest components', () => {
-    expect(wrapper.find(FilledRequests)).toHaveLength(2);
+  it('displays a list of two FilledRequest components', () => {
+    expect(wrapper.find(FilledRequest)).toHaveLength(2);
   });
 });
