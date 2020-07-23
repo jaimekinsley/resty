@@ -2,9 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Response from './Response';
 
-jest.mock('../services/fetchAPI.js', () => ({
-  fetchAPI() {
-    return Promise.resolve([
+describe('Response Component', () => {
+  let wrapper;
+  beforeEach(() => {
+    const response = [
       {
         'character': 'Bender',
         'quote': 'Bite my shiny metal ass.',
@@ -14,15 +15,12 @@ jest.mock('../services/fetchAPI.js', () => ({
         'character': 'Leela',
         'quote': '...at least here you\'ll be treated with dignity. Now strip naked and get on\nthe probulator.',
         'image': 'https://res.cloudinary.com/dzxqhkyqd/image/upload/v1554904145/leela.png'
-      }]);
-  }
-}));
-
-describe('Response Component', () => {
-  let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Response />);
+      }];
+    wrapper = shallow(<Response
+      response={response} />);
   });
 
-  it();
+  it('displays a Response object or array', () => {
+    expect(wrapper.find('response')).toBeDefined();
+  });
 });
