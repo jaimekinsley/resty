@@ -81,7 +81,7 @@ describe('MainContainer', () => {
 
   it('invokves the fetchAPI function on submit and updates state', () => {
     return wrapper.instance().handleSubmit({
-      preventDeault: () => {}
+      preventDefault: () => {}
     })
       .then(() => {
         expect(wrapper.state('response')).toEqual({ name: 'Bender' });
