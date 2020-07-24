@@ -65,7 +65,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
     name="jsonBody"
     onChange={[MockFunction]}
     type="textarea"
-    value="{ 'name': 'bender' }"
+    value="{}"
   />
   <button>
     Submit

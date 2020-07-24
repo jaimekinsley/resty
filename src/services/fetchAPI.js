@@ -6,7 +6,7 @@ export const fetchAPI = (api, method, jsonBody) => {
     headers: NO_BODY_METHODS.includes(method) ? null : {
       'Content-Type': 'application/json'
     },
-    body: NO_BODY_METHODS.includes(method) ? null : JSON.stringify(jsonBody)
+    body: NO_BODY_METHODS.includes(method) ? null : jsonBody
   })
     .then(res => res.json());
 };

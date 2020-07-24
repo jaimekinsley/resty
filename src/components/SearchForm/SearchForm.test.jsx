@@ -13,7 +13,7 @@ describe('SearchForm component', () => {
     wrapper = shallow(<SearchForm
       api="https://www.futuramaapi.herokuapp.com"
       method="patch"
-      jsonBody="{ 'name': 'bender' }"
+      jsonBody="{}"
       onChange={handleChange}
       onSubmit={handleSubmit}
     />);
@@ -35,7 +35,7 @@ describe('SearchForm component', () => {
   });
 
   it('has a textarea with a value set to jsonBody', () => {
-    expect(wrapper.find('input[name="jsonBody"]').prop('value')).toEqual('{ \'name\': \'bender\' }');
+    expect(wrapper.find('input[name="jsonBody"]').prop('value')).toEqual('{}');
   });
 
   it('invokes an onChange prop when the api input changes', () => {
