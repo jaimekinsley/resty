@@ -27,6 +27,13 @@ describe('SearchForm component', () => {
     expect(wrapper.find('input[name="method"]').findWhere(radios => radios.prop('checked')).prop('value')).toEqual('patch');
   });
 
+  it('invokves the onChange prop whenever the method radio buttons are clicked', () => {
+    wrapper.find('input[name="method"]').forEach(radioButton => {
+      radioButton.simulate('change');
+    });
+    expect(handleChange).toHaveBeenCalledTimes(5);
+  });
+
   it('has a textarea with a value set to jsonBody', () => {
     expect(wrapper.find('input[name="jsonBody"]').prop('value')).toEqual('{ \'name\': \'bender\' }');
   });
