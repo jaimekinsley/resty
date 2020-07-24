@@ -37,10 +37,6 @@ export default class MainContainer extends Component {
           onSubmit={this.handleSubmit}
         />
         <Response response={response} />
-        {/* <FilledRequests
-          api={api}
-          method={method}
-        /> */}
       </>
     );
   }
