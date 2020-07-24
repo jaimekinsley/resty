@@ -1,6 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MainContainer from './MainContainer';
+import { fetchAPI } from '../services/fetchAPI';
+
+jest.mock('../services/fetchAPI.js', () => ({
+  fetchAPI: jest.fn(() => Promise.resolve({ name: 'Bender' }))
+}));
 
 describe('MainContainer', () => {
   let wrapper;
@@ -52,6 +57,35 @@ describe('MainContainer', () => {
       }
     });
     expect(wrapper.state('jsonBody')).toEqual('{}');
+  });
+
+  it('prevents default on submit', () => {
+    const preventDefault = jest.fn();
+
+    wrapper.instance().handleSubmit({
+      preventDefault
+    });
+    expect(preventDefault).toHaveBeenCalledTimes(1);
+  });
+
+  it('invokes the fetchAPI function on submit', () => {
+    wrapper.setState({
+      api: 'http:/futuramaapi.com'
+    });
+    wrapper.instance().handleSubmit({
+      preventDefault: () => {}
+    });
+    expect(fetchAPI).toHaveBeenCalled();
+    expect(fetchAPI).toHaveBeenCalledWith('http:/futuramaapi.com', 'GET', '');
+  });
+
+  it('invokves the fetchAPI function on submit and updates state', () => {
+    return wrapper.instance().handleSubmit({
+      preventDeault: () => {}
+    })
+      .then(() => {
+        expect(wrapper.state('response')).toEqual({ name: 'Bender' });
+      });
   });
 
 });
