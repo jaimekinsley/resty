@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilledRequest component renders a FilledRequest 1`] = `
+<Fragment>
+  <p>
+    get
+  </p>
+  <p>
+    https://futuramaapi.com
+  </p>
+</Fragment>
+`;
