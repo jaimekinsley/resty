@@ -44,7 +44,7 @@ describe('SearchForm component', () => {
   });
 
   it('invokes an onChange prop when the method radio button changes', () => {
-    wrapper.find('input[value="get"]').simulate('change');
+    wrapper.find('input[value="GET"]').simulate('change');
     expect(handleChange).toHaveBeenCalledTimes(1);
   });
 
