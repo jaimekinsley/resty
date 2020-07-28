@@ -8,8 +8,8 @@ describe('FilledRequests component', () => {
   let wrapper;
   beforeEach(() => {
     const filledRequests = [
-      { method: 'get', api: 'http://firstrequest.com' },
-      { method: 'put', api: 'http://secondrequest.com' }
+      { method: 'GET', api: 'http://firstrequest.com' },
+      { method: 'PUT', api: 'http://secondrequest.com' }
     ];
     wrapper = shallow(<FilledRequests filledRequests={filledRequests} />);
   });
