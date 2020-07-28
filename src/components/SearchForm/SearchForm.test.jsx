@@ -12,7 +12,7 @@ describe('SearchForm component', () => {
     handleSubmit = jest.fn();
     wrapper = shallow(<SearchForm
       api="https://www.futuramaapi.herokuapp.com"
-      method="patch"
+      method="PATCH"
       jsonBody="{}"
       onChange={handleChange}
       onSubmit={handleSubmit}
@@ -24,7 +24,7 @@ describe('SearchForm component', () => {
   });
 
   it('has an radio button with a value set to PATCH', () => {
-    expect(wrapper.find('input[name="method"]').findWhere(radios => radios.prop('checked')).prop('value')).toEqual('patch');
+    expect(wrapper.find('input[name="method"]').findWhere(radios => radios.prop('checked')).prop('value')).toEqual('PATCH');
   });
 
   it('invokves the onChange prop whenever the method radio buttons are clicked', () => {

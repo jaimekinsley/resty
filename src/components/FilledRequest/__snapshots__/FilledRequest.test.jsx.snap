@@ -3,7 +3,7 @@
 exports[`FilledRequest component renders a FilledRequest 1`] = `
 <Fragment>
   <p>
-    get
+    GET
   </p>
   <p>
     https://futuramaapi.com

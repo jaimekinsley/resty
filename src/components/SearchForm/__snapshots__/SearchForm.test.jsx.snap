@@ -17,7 +17,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       name="method"
       onChange={[MockFunction]}
       type="radio"
-      value="get"
+      value="GET"
     />
     GET
   </label>
@@ -27,7 +27,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       name="method"
       onChange={[MockFunction]}
       type="radio"
-      value="post"
+      value="POST"
     />
     POST
   </label>
@@ -37,7 +37,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       name="method"
       onChange={[MockFunction]}
       type="radio"
-      value="put"
+      value="PUT"
     />
     PUT
   </label>
@@ -47,7 +47,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       name="method"
       onChange={[MockFunction]}
       type="radio"
-      value="patch"
+      value="PATCH"
     />
     PATCH
   </label>
@@ -57,7 +57,7 @@ exports[`SearchForm component renders the SearchForm component 1`] = `
       name="method"
       onChange={[MockFunction]}
       type="radio"
-      value="delete"
+      value="DELETE"
     />
     DELETE
   </label>
